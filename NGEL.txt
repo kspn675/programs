@@ -1,4 +1,4 @@
-def nextgreaterleft(arr):
+def NextGreaterLeft(arr):
   result = []
   for i in range(0, len(arr)):
     for j in range(i-1, -1, -1):
@@ -11,4 +11,4 @@ def nextgreaterleft(arr):
   return result
 
 arr = [6, 0, 9, 4, 5, 2]
-print(nextgreatertleft(arr))
+print(NextGreatertLeft(arr))
