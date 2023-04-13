@@ -11,4 +11,4 @@ def nextgreaterleft(arr):
   return result
 
 arr = [6, 0, 9, 4, 5, 2]
-print(nearestgreatertleft(arr))
+print(nextgreatertleft(arr))
