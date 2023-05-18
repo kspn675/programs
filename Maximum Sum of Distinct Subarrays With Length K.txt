@@ -1,0 +1,18 @@
+class Solution:
+    def maximumSubarraySum(self, nums: List[int], k: int) -> int:
+        res = 0
+        unique = defaultdict(int)
+        start = sum(nums[:k])
+        for element in nums[:k]: unique[element] += 1
+        if len(unique) == k: res = start
+        
+            
+        for i in range(k, len(nums)):
+            delete, add = nums[i-k], nums[i]
+            start += (add - delete)
+            unique[delete] -= 1
+            if unique[delete] == 0: del unique[delete]
+            unique[add] += 1
+            if len(unique) == k: res = max(res, start)
+                
+        return res
